@@ -52,7 +52,7 @@ Requirements: Docker with Compose.
 
 ```bash
 cp .env.example .env          # Windows: copy .env.example .env
-# edit .env and change SECRET_KEY and the passwords
+# then set SECRET_KEY and POSTGRES_PASSWORD in .env
 docker compose up -d --build
 ```
 
@@ -74,7 +74,7 @@ docker compose exec backend python manage.py popular
 
 ### Demo logins
 
-Staff sign in through "Área do funcionário" in the header. The seed creates these users with the passwords set in `.env`:
+Staff sign in through "Área do funcionário" in the header. The seed creates these users. A password variable left empty in `.env` makes the seed generate a random password and print it once in the backend log (`docker compose logs backend`):
 
 | User | Password variable | Sees |
 |---|---|---|
@@ -82,7 +82,7 @@ Staff sign in through "Área do funcionário" in the header. The seed creates th
 | `cozinha` | `COZINHA_PASSWORD` | Kitchen |
 | `garcom` | `GARCOM_PASSWORD` | Waiter |
 
-The seed only creates users that do not exist yet, so changing a password in `.env` later does not update an existing user.
+The seed only creates users that do not exist yet, so changing a password in `.env` later does not update an existing user. To reset one, run `docker compose exec backend python manage.py changepassword admin`.
 
 The source folders are mounted into the containers. Vite uses file polling so hot reload also works with Docker on Windows.
 
@@ -130,5 +130,5 @@ Built with AI coding assistants as part of my workflow.
 
 Café Verde é um sistema de pedidos por mesa para cafeteria: o cliente pede pelo celular e as telas da cozinha e do garçom atualizam em tempo real via WebSocket (Django Channels + Redis).
 A seção "Em alta" é calculada no banco a partir das vendas dos últimos 7 dias, e o preço de cada pedido é sempre calculado no servidor.
-Para rodar: copie `.env.example` para `.env`, troque as senhas e execute `docker compose up -d --build`; o site abre em http://localhost:5173.
+Para rodar: copie `.env.example` para `.env`, defina `SECRET_KEY` e `POSTGRES_PASSWORD` e execute `docker compose up -d --build`; o site abre em http://localhost:5173 e as senhas geradas dos funcionários aparecem no log do backend.
 É um projeto de estudo, sem deploy em produção.

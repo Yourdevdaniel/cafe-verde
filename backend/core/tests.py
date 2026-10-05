@@ -54,7 +54,7 @@ class PedidoTests(APITestCase):
         resp = self.client.patch(url, {"status": "pronto"}, format="json")
         self.assertEqual(resp.status_code, 401)
 
-        User.objects.create_user("cozinha", password="x")
+        User.objects.create_user("cozinha")
         self.client.force_authenticate(User.objects.get(username="cozinha"))
         resp = self.client.patch(url, {"status": "pronto"}, format="json")
         self.assertEqual(resp.status_code, 200)

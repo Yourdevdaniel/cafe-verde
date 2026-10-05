@@ -1,5 +1,6 @@
 import os
 import random
+import secrets
 
 from django.contrib.auth.models import Group, User
 from django.core.management.base import BaseCommand
@@ -103,14 +104,19 @@ class Command(BaseCommand):
                     )
             self.stdout.write("Avaliações iniciais criadas.")
 
+        # Senha vem da variável de ambiente; sem ela, gera uma e mostra só desta vez.
         usuarios = [
-            ("admin", os.environ.get("ADMIN_PASSWORD", "admin123"), None, True),
-            ("cozinha", os.environ.get("COZINHA_PASSWORD", "cozinha123"), "cozinha", False),
-            ("garcom", os.environ.get("GARCOM_PASSWORD", "garcom123"), "garcom", False),
+            ("admin", "ADMIN_PASSWORD", None, True),
+            ("cozinha", "COZINHA_PASSWORD", "cozinha", False),
+            ("garcom", "GARCOM_PASSWORD", "garcom", False),
         ]
-        for username, senha, grupo, staff in usuarios:
+        for username, variavel, grupo, staff in usuarios:
             if User.objects.filter(username=username).exists():
                 continue
+            senha = os.environ.get(variavel)
+            gerada = not senha
+            if gerada:
+                senha = secrets.token_urlsafe(12)
             user = User.objects.create_user(username=username, password=senha)
             user.is_staff = staff
             user.is_superuser = staff
@@ -118,6 +124,12 @@ class Command(BaseCommand):
             if grupo:
                 g, _ = Group.objects.get_or_create(name=grupo)
                 user.groups.add(g)
-            self.stdout.write(f"Usuário '{username}' criado.")
+            if gerada:
+                self.stdout.write(
+                    f"Usuário '{username}' criado com a senha gerada: {senha} "
+                    f"(anote, ela não aparece de novo; defina {variavel} no .env para escolher)."
+                )
+            else:
+                self.stdout.write(f"Usuário '{username}' criado.")
 
         self.stdout.write(self.style.SUCCESS("Seed concluído."))
