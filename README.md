@@ -111,7 +111,19 @@ Built with AI coding assistants as part of my workflow.
 
 ## Credits
 
-- Product photos from Unsplash, except the pão de queijo photo: ["Cheesebread"](https://commons.wikimedia.org/wiki/File:Cheesebread.jpg) by Murilo Manzini, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/), via Wikimedia Commons (resized).
+- Product photos from Unsplash, except the ones below, which come from Wikimedia Commons (resized, some cropped):
+  - Espresso: ["Cup of espresso 02"](https://commons.wikimedia.org/wiki/File:Cup_of_espresso_02.jpg) by Kritzolina, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
+  - Latte Caramelo: ["Vegan Caramel Latte (5221801524)"](https://commons.wikimedia.org/wiki/File:Vegan_Caramel_Latte_%285221801524%29.jpg) by Jennifer from Vancouver, Canada, [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/)
+  - Mocha: ["Mocha (4355110522)"](https://commons.wikimedia.org/wiki/File:Mocha_%284355110522%29.jpg) by Karen and Brad Emerson, [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/)
+  - Café Coado da Casa: ["Café coado"](https://commons.wikimedia.org/wiki/File:Caf%C3%A9_coado.jpg) by Melsj, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
+  - Chocolate Gelado: ["Iced Chocolate - T @ Hove 2023-09-07"](https://commons.wikimedia.org/wiki/File:Iced_Chocolate_-_T_@_Hove_2023-09-07.jpg) by Andy Li, [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/)
+  - Pão de Queijo: ["Cheesebread"](https://commons.wikimedia.org/wiki/File:Cheesebread.jpg) by Murilo Manzini, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
+  - Croissant de Presunto e Queijo: ["Ham and cheese croissant 1119159785"](https://commons.wikimedia.org/wiki/File:Ham_and_cheese_croissant_1119159785.jpg) by Charles Haynes, [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/)
+  - Empada de Frango: ["Empadas de frango Vila Isabel Rio de Janeiro Brasil"](https://commons.wikimedia.org/wiki/File:Empadas_de_frango_Vila_Isabel_Rio_de_Janeiro_Brasil.jpg) by Eduardo P, [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/)
+  - Bolo de Cenoura: ["Bolo de Cenoura, 08-12-2020"](https://commons.wikimedia.org/wiki/File:Bolo_de_Cenoura,_08-12-2020.jpg) by Pedro Toniazzo Terres, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
+  - Combo da Manhã: ["Pao de queijo com cafe"](https://commons.wikimedia.org/wiki/File:Pao_de_queijo_com_cafe.jpg) by nwerneck, [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/)
+  - Combo da Tarde: ["Carrot cake, Eppstein"](https://commons.wikimedia.org/wiki/File:Carrot_cake,_Eppstein.jpg) by Gerda Arendt, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
+  - Combo Duplo: ["Coffee Caramel Croissant, Nutella Cookie, Flat White, Latte - Bee May Bakery 2026-09-29"](https://commons.wikimedia.org/wiki/File:Coffee_Caramel_Croissant,_Nutella_Cookie,_Flat_White,_Latte_-_Bee_May_Bakery_2026-09-29.jpg) by Andy Li, [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/)
 - Fonts: Fraunces and Nunito Sans, from Google Fonts.
 
 ## Versão em português
