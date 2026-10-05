@@ -260,7 +260,7 @@ export default function Cardapio() {
   return (
     <>
       <section className="hero">
-        <img className="fundo" src="/img/espresso.jpg" alt="" />
+        <img className="fundo" src="/img/hero.jpg" alt="" />
         <div className="hero-conteudo">
           <span className="hero-eyebrow">★ 4,9 · Torra artesanal · Aberto agora</span>
           <h1>O seu café sai da mesa, sem fila.</h1>
